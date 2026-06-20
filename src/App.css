@@ -1,0 +1,26 @@
+/* Background & Global Layout */
+.bg-mesh {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(0,112,243,0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(142,36,170,0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0,112,243,0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(142,36,170,0.1) 0px, transparent 50%);
+  z-index: -1; pointer-events: none;
+}
+
+.bg-orb {
+  position: fixed; border-radius: 50%; filter: blur(100px);
+  z-index: -2; animation: float 20s infinite alternate; pointer-events: none;
+}
+.orb-1 { width: 400px; height: 400px; background: rgba(0,112,243,0.2); top: -100px; left: -100px; }
+.orb-2 { width: 500px; height: 500px; background: rgba(142,36,170,0.15); bottom: -200px; right: -100px; animation-delay: -10s; }
+
+@keyframes float {
+  0% { transform: translate(0,0) scale(1); }
+  100% { transform: translate(100px, 50px) scale(1.2); }
+}
+
+/* Scroll reveal */
+.scroll-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }

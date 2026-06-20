@@ -1,0 +1,30 @@
+.terms-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.terms-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.back-link {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: var(--text-secondary); font-size: 0.9rem;
+  transition: color 0.3s; margin-bottom: 2rem;
+}
+.back-link:hover { color: var(--accent-light-blue); }
+
+.terms-header h1 {
+  font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;
+}
+.terms-header > p { color: var(--text-secondary); margin-bottom: 3rem; }
+
+.terms-content { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.terms-section { padding: 2rem !important; }
+.terms-section h2 {
+  font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.8rem;
+}
+.terms-section p { color: var(--text-secondary); line-height: 1.8; }
