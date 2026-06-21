@@ -1,0 +1,144 @@
+/* Services Page Styling */
+.services-full-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.service-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 2.5rem !important;
+}
+
+.service-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.service-detail-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-light-blue);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.service-detail-card:hover .service-detail-icon {
+  background: var(--gradient-primary);
+  color: white;
+  transform: scale(1.08) rotate(3deg);
+  border-color: transparent;
+}
+
+.service-detail-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-light-blue);
+  margin-bottom: 0.4rem;
+}
+
+.service-detail-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.service-detail-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.service-bullets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.service-bullets-container h4 {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-detail-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.service-detail-bullets li {
+  display: flex;
+  gap: 0.6rem;
+  color: var(--text-primary);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.bullet-point-arrow {
+  color: var(--accent-light-blue);
+  font-size: 0.8rem;
+}
+
+/* Consultation banner */
+.consultation-banner {
+  text-align: center;
+  padding: 4rem 3rem !important;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.consultation-banner p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.consultation-banner a {
+  text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .services-full-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .service-detail-card {
+    padding: 2.5rem 2rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .consultation-banner {
+    padding: 2.5rem 1.5rem !important;
+  }
+  .consultation-banner h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -29,7 +29,20 @@
   overflow-x: auto;
 }
 
+/* ── Responsive ── */
 @media (max-width: 968px) {
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-stats { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .about-grid { gap: 2rem; }
+  .about-stats { gap: 1.5rem; }
+  .stat-item h3 { font-size: 2rem; }
+  .about-text p { font-size: 0.97rem; }
+}
+
+@media (max-width: 480px) {
+  .about-stats { gap: 1rem; }
+  .stat-item h3 { font-size: 1.75rem; }
 }

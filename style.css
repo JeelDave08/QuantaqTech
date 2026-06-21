@@ -610,70 +610,104 @@ footer p {
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 8rem;
-    }
-    
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 4rem;
-    }
-    
-    .hero-subtitle {
-        max-width: 100%;
-        margin: 0 auto 2.5rem;
-    }
-    
-    .hero-cta {
-        justify-content: center;
-    }
+/* ═══════════════════════════════════════
+   COMPREHENSIVE MOBILE RESPONSIVENESS
+   Breakpoints: 1024 · 768 · 600 · 480 · 390 · 320
+   ═══════════════════════════════════════ */
 
-    .about-grid, .contact-card {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-card {
-        padding: 2rem !important;
-    }
-
-    .stats {
-        justify-content: center;
-    }
+/* ── Tablet landscape (≤1024px) ── */
+@media (max-width: 1024px) {
+  .section-container { padding: 5rem 1.8rem; }
+  .section-title { font-size: 2.5rem; }
 }
 
+/* ── Tablet portrait (≤968px) ── */
+@media (max-width: 968px) {
+  .section-container { padding: 4.5rem 1.5rem; }
+  .section-title { font-size: 2.2rem; margin-bottom: 2.5rem; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .stats { justify-content: center; }
+
+  /* Contact */
+  .contact-card {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    padding: 2rem !important;
+  }
+}
+
+/* ── Large phones / small tablets (≤768px) ── */
 @media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 70%;
-        background: rgba(10, 10, 15, 0.95);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: 0.4s ease;
-    }
+  .section-container { padding: 4rem 1.2rem; }
+  .section-title { font-size: 2rem; margin-bottom: 2rem; }
 
-    .nav-links.active {
-        right: 0;
-    }
+  /* Services */
+  .services-grid { grid-template-columns: 1fr; }
 
-    .mobile-menu-btn {
-        display: flex;
-        z-index: 101;
-    }
+  /* Portfolio */
+  .portfolio-grid { grid-template-columns: 1fr; }
 
-    nav .btn-primary {
-        display: none;
-    }
+  /* Buttons - stack on mobile */
+  .hero-cta { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+}
 
-    .hero-title {
-        font-size: 3rem;
-    }
+/* ── Standard phones (≤600px) ── */
+@media (max-width: 600px) {
+  .section-container { padding: 3.5rem 1rem; }
+  .section-title { font-size: 1.85rem; }
+
+  /* Reduce glass card padding */
+  .glass-card { padding: 1.5rem; }
+
+  /* Contact card padding */
+  .contact-card { padding: 1.5rem !important; }
+
+  /* Stats */
+  .stats { gap: 1.5rem; }
+  .stat-item h3 { font-size: 2rem; }
+}
+
+/* ── Standard phones (≤480px) ── */
+@media (max-width: 480px) {
+  .section-container { padding: 3rem 1rem; }
+  .section-title { font-size: 1.7rem; margin-bottom: 1.5rem; }
+
+  .glass-card { padding: 1.2rem; border-radius: 16px; }
+
+  /* Smaller code card */
+  .code-body { font-size: 0.8rem; padding: 1rem; }
+
+  /* About stats */
+  .about-stats { gap: 1.5rem; }
+
+  /* Footer orbs - reduce size on mobile */
+  .orb-1 { width: 250px; height: 250px; }
+  .orb-2 { width: 300px; height: 300px; }
+}
+
+/* ── iPhone SE / small phones (≤390px) ── */
+@media (max-width: 390px) {
+  .section-title { font-size: 1.55rem; }
+  .section-container { padding: 2.5rem 0.9rem; }
+
+  .glass-card { padding: 1rem; border-radius: 14px; }
+
+  /* Nav */
+  .nav-container { padding: 0 1rem; }
+
+  /* Buttons */
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Tiny phones (≤320px) ── */
+@media (max-width: 320px) {
+  .section-title { font-size: 1.4rem; }
+  .section-container { padding: 2rem 0.75rem; }
+  .glass-card { padding: 0.9rem; }
 }

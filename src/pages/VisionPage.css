@@ -1,0 +1,136 @@
+/* Vision Page Styling */
+.vision-statement {
+  position: relative;
+  padding: 3rem 4rem !important;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.vision-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 6rem;
+  line-height: 0.5;
+  color: var(--accent-purple);
+  opacity: 0.3;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.vision-quote-mark.right {
+  top: auto;
+  bottom: 1rem;
+  left: auto;
+  right: 2rem;
+}
+
+.vision-statement blockquote {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.vision-point-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-index {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--accent-purple);
+  opacity: 0.08;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  line-height: 1;
+}
+
+.vision-icon-lg {
+  font-size: 2.2rem;
+}
+
+.vision-point-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.vision-point-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Future outlook section */
+.vision-future-card {
+  text-align: center;
+  padding: 4rem 3rem !important;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.vision-future-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  max-width: 700px;
+}
+
+.vision-future-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.vision-future-cta a {
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+  .vision-statement {
+    padding: 2.5rem 2rem !important;
+  }
+  .vision-statement blockquote {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .vision-quote-mark {
+    font-size: 4rem;
+  }
+  .vision-future-card {
+    padding: 2.5rem 1.5rem !important;
+  }
+  .vision-future-cta {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .vision-future-cta a {
+    width: 100%;
+    max-width: 280px;
+  }
+}
