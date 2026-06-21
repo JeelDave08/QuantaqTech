@@ -14,16 +14,16 @@ export default function About() {
             <p>From complex enterprise systems to intuitive user interfaces, we blend creativity with robust engineering to deliver solutions that make a real impact.</p>
             <div className="about-stats">
               <div className="stat-item">
-                <h3 className="text-gradient">50+</h3>
-                <p>Projects Delivered</p>
-              </div>
-              <div className="stat-item">
                 <h3 className="text-gradient">99%</h3>
                 <p>Client Satisfaction</p>
               </div>
               <div className="stat-item">
                 <h3 className="text-gradient">3+</h3>
                 <p>Years Experience</p>
+              </div>
+              <div className="stat-item">
+                <h3 className="text-gradient">10+</h3>
+                <p>Industries Served</p>
               </div>
             </div>
           </div>

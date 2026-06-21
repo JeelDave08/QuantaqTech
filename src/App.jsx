@@ -10,6 +10,7 @@ import ServicesPage from './pages/ServicesPage'
 import PortfolioPage from './pages/PortfolioPage'
 import ContactPage from './pages/ContactPage'
 import Terms from './pages/Terms'
+import Privacy from './pages/Privacy'
 import './App.css'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
       
       <Footer />
